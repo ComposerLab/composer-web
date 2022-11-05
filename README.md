@@ -1,39 +1,68 @@
 # Composer Web
+
 가천대학교 졸업 프로젝트
 
 ## Stacks
 
-- yarn berry
-- Nextjs
-- react-query
-- styled-components
-- git action
-- docker
+-   yarn berry
+-   Nextjs
+-   react-query
+-   styled-components
+-   git action
+-   docker
+
+## 개발 환경 설정
+
+```
+- ./env/env
+S3URL=${S3URL}
+
+- ./next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  compiler: {
+    styledComponents: true,
+  },
+  images: {
+    domains: [${S3URL}],
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/be/:path*',
+        destination: `${BACKEND_URL}/:path*`,
+      },
+    ];
+  },
+};
+
+module.exports = nextConfig
+
+```
 
 ## 설치 방법
 
 OS X & 리눅스:
 
 ```sh
-yarn
+yarn set version berry
+yarn install
 ```
 
 윈도우:
 
 ```sh
-yarn
+yarn set version berry
+yarn install
 ```
-
-## 사용 예제
-
-_더 많은 예제와 사용법은 [Wiki][wiki]를 참고하세요._
-
-## 개발 환경 설정
 
 ## 업데이트 내역
 
-- 0.0.1
-  - 작업 진행 중
+-   0.0.1
+    -   작업 진행 중
+-   1.0.0
+    -   졸업프로젝트 종료
 
 ## 정보
 
