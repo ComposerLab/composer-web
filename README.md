@@ -2,12 +2,12 @@
 
 ## Stacks
 
-yarn berry
-Nextjs
-react-query
-styled-components
-git action
-docker
+- yarn berry
+- Nextjs
+- react-query
+- styled-components
+- git action
+- docker
 
 ## 설치 방법
 
