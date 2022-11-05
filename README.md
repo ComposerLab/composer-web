@@ -1,5 +1,14 @@
 # Composer Web
 
+## Stacks
+
+yarn berry
+Nextjs
+react-query
+styled-components
+git action
+docker
+
 ## 설치 방법
 
 OS X & 리눅스:
